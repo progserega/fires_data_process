@@ -1,0 +1,7 @@
+#!/bin/bash
+import_data_file="./NASA_fires_Russia_and_Asia_24h.csv"
+out_file="fire_geojson.js"
+parser="./fires_csv2json.py"
+email_error_to="admin@emailserver.ru"
+email_server="smtp.emailserver.ru"
+log="./fires_data.log"

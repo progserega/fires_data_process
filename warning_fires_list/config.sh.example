@@ -1,0 +1,12 @@
+#!/bin/bash
+fires_data_file="../nasa/NASA_fires_Russia_and_Asia_24h.csv"
+
+tp_data_file="../corp_data_list/tp_list.csv"
+tp_warning_list="tp_warning.list"
+station_data_file="../corp_data_list/station_list.csv"
+station_warning_list="station_warning.list"
+
+parser="./generate_warning_fires_list.py"
+email_error_to="semenov@rsprim.ru"
+email_server="mail-rsprim-ru.rs.int"
+log="generate_warning_fires_list.log"

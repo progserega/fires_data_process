@@ -1,0 +1,8 @@
+#!/bin/bash
+connect_opt="--proxy \"http://prx.rs.int:3128\""
+# test key:
+API_KEY="L5VW1QBBHJ"
+
+log="/var/log/fire_osm.log"
+
+result="/opt/osm/openstreetmap.ru/OpenStreetMap.ru_dev/www/js/page.map/fire_geojson.js"

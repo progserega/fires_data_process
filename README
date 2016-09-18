@@ -1,0 +1,25 @@
+Скрипты скачивания, преобразования и обработки данных о пожарах.
+
+nasa/ - получение данных о пожарах от НАСА
+./nasa/fires_csv2json.py - конвертор данных о пожарах из csv в json для отображения на сайте
+./nasa/run.sh - скрипт-обёртка для запуска скачивания данных о пожарах с сайта НАСА и конвертации их в json, путём запуска fires_csv2json.py
+./nasa/fires_csv2json_conf.py.example - пример конфига для конвертера csv -> json (необходимо его скопировать в ./nasa/fires_csv2json_conf.py)
+./nasa/config.sh.example - пример конфига для получения данных о пожарах от НАСА  (необходимо его скопировать в ./corp_data_list/db_config.py)
+
+corp_data_list/ - формирование списка подстанций и ТП из внутренней базы ОСМ предприятия, хранящей данные предприятия
+./corp_data_list/get_station_list.py - получение списка станций
+./corp_data_list/get_tp_list.py - получение списка ТП
+./corp_data_list/db_config.py.example - пример конфига для получения внутренних данных предприятия из базы ОСМ (необходимо его скопировать в ./corp_data_list/db_config.py и подправить под себя)
+
+kosmosnimki/ - получение данных о пожарах от компании "Космоснимки"
+./kosmosnimki/fires_update.sh - скачивание данных о пожарах у компании "Космоснимки"
+./kosmosnimki/config.sh.example - пример конфига для запуска получения данных о пожарах от компании "Космоснимки" (необходимо его скопировать в ./kosmosnimki/config.sh и подправить под себя)
+
+warning_fires_list/ - скрипты аналитики данных о пожарах - сопоставление координат пожаров за посление N-часов и координат объектов предприятия. Формирование отчёта.
+./warning_fires_list/config.sh.example - пример конфига для запуска аналитики (необходимо его скопировать в ./warning_fires_list/config.sh и подправить под себя)
+./warning_fires_list/generate_warning_fires_list_config.py.example - пример конфига для тонкой настройки скрипта аналитики (необходимо его скопировать в ./warning_fires_list/generate_warning_fires_list_config.py и подправить под себя)
+./warning_fires_list/generate_warning_fires_list.py - скрипт формирования отчёта о приближении пожаров к объектам предприятия
+./warning_fires_list/great_circles.py - процедура от gis-lab для вычисления расстояния и начального азимута между двумя точками на сфере (http://gis-lab.info/qa/great-circles.html)
+./warning_fires_list/run.sh - скрипт-обёртка для запуска аналитики для подстанций и ТП
+
+README - этот файл
